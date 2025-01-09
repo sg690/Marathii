@@ -9,17 +9,16 @@ import { story } from '../../../story.model';
 export class StoryService {
 
   private apiUrl = 'http://localhost:3000/';
-  private Url = 'http://localhost:3000/api/';
 
     constructor(private http: HttpClient) {}
 
 
     getStories(): Observable<any[]> {
-      return this.http.get<any[]>(this.Url);
+      return this.http.get<any[]>(`${this.apiUrl}api`);
     }
   
     getStoryById(_id: String): Observable<any> {
-      return this.http.get<any>(`${this.Url}/${_id}`);
+      return this.http.get<any>(`${this.apiUrl}api/${_id}`);
     }
   
     // Update an existing story
