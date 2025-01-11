@@ -67,6 +67,8 @@ body {
 }
 
 .detail-card-excerpt {
+  font-family: 'Poppins', sans-serif;
+  white-space: pre-wrap;
   font-size: 16px;
   margin: 10px 0;
   color: black;
