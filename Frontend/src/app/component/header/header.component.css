@@ -164,8 +164,8 @@ a {
     flex-direction: column;
     align-items: start;
     left: -100%; /* Hidden off-screen initially */
-    height: auto;
-    width: 40%;
+    height: 100%;
+    width: 100%;
   }
 
   .navbar.active {
@@ -214,7 +214,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px auto 20px; /* Adjust margin to sit below navbar */
+    margin: 60px auto 0px; /* Adjust margin to sit below navbar */
     padding: 10px;
     max-width: 800px;
     width: 90%;

@@ -1,16 +1,24 @@
 <div class="container">
-    <!-- Sidebar -->
+  <!-- Sidebar Section -->
+  <section class="sidebar-section">
     <app-sidebar></app-sidebar>
-  
-    <!-- Main Content -->
-    <div class="sidebar">
+  </section>
+
+  <!-- Main Content Section -->
+  <section class="">
+    <div class="results-header">
       <h2>Categories</h2>
+    </div>
+
+    <div class="main-content-section">
+    <div class="sidebar">
+      <h2></h2>
       <ul class="category-list">
         <li *ngFor="let category of categories">
           <a (click)="onCategoryClick(category)">{{ category }}</a>
         </li>
       </ul>
-    </div> 
-    
+    </div>
   </div>
-  
+  </section>
+</div>

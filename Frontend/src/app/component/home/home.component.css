@@ -143,9 +143,17 @@ body {
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
+    gap: 0px;
+    padding: 0px;
   }
 
   .card-container {
     grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .stories-container {
+    background-color: #ffffff;
+    padding: 0px 20px 20px 20px;
+    border-radius: 5px;
   }
 }

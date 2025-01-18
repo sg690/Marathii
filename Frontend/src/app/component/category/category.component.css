@@ -3,50 +3,48 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ebe8e8; /* Changed background color */
+  background-color: #ebe8e8; /* Background color */
   color: black; /* Set all text color to black */
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Sidebar 1/3, Results 2/3 */
+  grid-template-columns: 1fr 2fr; /* Sidebar 1/4, Main content 3/4 */
   gap: 20px;
   padding: 20px;
 }
 
-/* Sidebar styles */
-.sidebar {
-  background-color: #ffffff; /* Change from #ecf0f1 to white */
+/* Sidebar Section styles */
+.sidebar-section {
+  background-color: #ffffff; /* White background */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Main Content Section styles */
+.main-content-section {
+  background-color: #ffffff; /* White background */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-.sidebar h2 {
-  font-size: 18px;
-  color: black; /* Changed text color to black */
+.main-content-section h2 {
+  font-size: 20px;
+  color: #34495e;
   margin-bottom: 10px;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.results-header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.sidebar li {
-  margin: 10px 0;
+.results-header h2 {
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
 }
-
-.sidebar a {
-  text-decoration: none;
-  color: black; /* Changed link color to black */
-}
-
-.sidebar a:hover {
-  color: #1abc9c; /* Keep hover color for links */
-  text-decoration: underline;
-}
-
 .category-list {
   list-style: none;
   padding: 0;
@@ -65,6 +63,7 @@ body {
   display: block;
   border-radius: 4px;
   transition: all 0.3s ease;
+  cursor: pointer; /* Show pointer on hover */
 }
 
 .category-list a:hover {
@@ -72,21 +71,12 @@ body {
   color: #ffffff;
 }
 
-/* Main Content styles */
-.app-sidebar {
-  flex: 3; /* Main content takes more space */
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
+    grid-template-columns: 1fr; /* Single column layout */
   }
-
-  .sidebar {
-    max-width: 100%;
-    min-width: auto;
-    height: auto; /* Adjust height for small screens */
-    position: relative; /* Disable sticky behavior */
+  .sidebar-section{
+    display: none;
   }
 }
